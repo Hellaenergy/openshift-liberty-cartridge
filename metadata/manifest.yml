@@ -2,35 +2,37 @@ Name: liberty
 Cartridge-Short-Name: LIBERTY
 Display-Name: Liberty Cartridge
 Cartridge-Vendor: ibm
-Description: "A cartridge for IBM WebSphere Application Server Liberty."
-Version: '8.5.5.2'
+Description: A cartridge for IBM WebSphere Application Server Liberty.
+Version: 8.5.5.2
 Vendor: IBM
 Cartridge-Version: 0.0.1
 Scaling:
   Min: 1
   Max: -1
 Categories:
-  - web_framework
-  - java
-  - service
-  - liberty
+- web_framework
+- java
+- service
+- liberty
 Endpoints:
-  - Private-IP-Name:   IP
-    Private-Port-Name: HTTP_PORT
-    Private-Port:      8080
-    Public-Port-Name:  HTTP_PROXY_PORT
-    WebSocket-Port-Name: WEBSOCKET_PORT
-    WebSocket-Port: 8080
-    Protocols:
-      - http
-      - ws
-    Mappings:
-      - Frontend:      ""
-        Backend:       ""
-        Options:       { websocket: true }
+- Private-IP-Name: IP
+  Private-Port-Name: HTTP_PORT
+  Private-Port: 8080
+  Public-Port-Name: HTTP_PROXY_PORT
+  WebSocket-Port-Name: WEBSOCKET_PORT
+  WebSocket-Port: 8080
+  Protocols:
+  - http
+  - ws
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: true
 Subscribes:
   set-env:
     Type: ENV:*
     Required: false
 Additional-Control-Actions:
 - threaddump
+Source-Url: https://github.com/Hellaenergy/openshift-liberty-cartridge/archive/master.zip
